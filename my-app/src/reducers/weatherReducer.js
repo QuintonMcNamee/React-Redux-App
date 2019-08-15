@@ -5,7 +5,7 @@ import {
 } from '../actions';
 
 const initialState = {
-  weathers: [],
+  weatherArr: [],
   isLoading: false,
   error: ''
 };
@@ -22,7 +22,7 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        weathers: action.payload,
+        weatherArr: action.payload,
         error: ''
       };
     default:

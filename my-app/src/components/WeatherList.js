@@ -9,20 +9,20 @@ import Weather from './Weather';
 const WeatherList = props => {
   return (
     <>
-      <h1>Welcome to the weather</h1>
+      <h1>Welcome to the Weather</h1>
       <button onClick={props.getData}>
         {props.isLoading ? (
           <Loader
            type="Plane"
            color="#00BFFF"
-           height="100"
+           height="20"
            width="100"
           /> ) : (
             'Get Weather Data'
           )}
       </button>
-      {props.weathers &&
-        props.weathers.map(item => <Weather key={item.name} weather={item} />)}
+      {props.weatherArr &&
+        props.weatherArr.map(item => <Weather key={item.name} weather={item} />)}
     </>
   );
 };
@@ -30,7 +30,7 @@ const WeatherList = props => {
 const mapStateToProps = state => {
   return {
     isLoading: state.isLoading,
-    weathers: state.weathers
+    weatherArr: state.weatherArr
   };
 };
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Weather = props => {
+  console.log(props.weather.name)
   return (
     <div>
-      <h4>{props.weather.title}</h4>
-      <h6>{props.weather.location_type}</h6>
+      <h4>{props.weather.name}</h4>
     </div>
   )
 }
