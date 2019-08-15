@@ -22,7 +22,7 @@ const WeatherList = props => {
           )}
       </button>
       {props.weathers &&
-        props.weathers.map(item => <Weather key={item.name} weather={item} /> )}
+        props.weathers.map(item => <Weather key={item.name} weather={item} />)}
     </>
   );
 };
